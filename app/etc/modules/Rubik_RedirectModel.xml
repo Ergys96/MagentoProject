@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rubik_RedirectModel>
+            <active>true</active>
+            <!-- core,community or local -->
+            <codePool>local</codePool> 
+        </Rubik_RedirectModel>
+    </modules>
+</config>

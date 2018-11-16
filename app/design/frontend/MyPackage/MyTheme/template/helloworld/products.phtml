@@ -1,0 +1,22 @@
+<h3>Products with price lower than 80 US Dollars </h3>
+<!-- TABLE -->
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+</thead>
+<tbody>
+
+<?php 
+$products = $this->getProducts();
+
+foreach($products as $product){
+    echo "<tr>";
+    echo "<td>".$product->getName()."</td>";
+    echo "<td>".$product->getPrice()."</td>";
+    echo "</tr>";
+}
+echo "</tbody></table>";
+?>

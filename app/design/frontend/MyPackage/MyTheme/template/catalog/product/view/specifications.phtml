@@ -1,0 +1,9 @@
+
+<?php
+  $productModel = Mage::getModel('catalog/product'); //get the product model.
+  if(Mage::registry('current_product')){ 
+  $productID =  Mage::registry('current_product')->getId(); //fetch the current product ID
+  $product = $productModel->load($productID); //loads the product with the specific ID
+  }
+echo $product->getData('specifications'); //fetch specifications data from product
+?>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Rubik_RedirectModel>
+        <version>0.0.1</version>
+    </Rubik_RedirectModel>
+</modules>
+<global>
+    <models>
+        <Rubik_RedirectModel>
+            <class>Rubik_RedirectModel_Model</class>
+        </Rubik_RedirectModel>
+    </models>
+    <events>
+        <!-- The name of the event that will spark -->
+        <customer_login>
+            <observers>
+                <Rubik_RedirectModel>
+                    <class>Rubik_RedirectModel/observer</class>
+                    <!-- Name of function we will create in Observer.php -->
+                    <method>redirect</method>
+                    <type>singleton</type>
+                </Rubik_RedirectModel>
+            </observers>
+        </customer_login>
+    </events>
+</global>
+</config>

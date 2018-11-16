@@ -1,0 +1,9 @@
+tr, th, td {
+    border:1px solid black;
+    padding:10px;
+}
+
+thead {
+    color: red;
+    font-weight: bolder;
+}

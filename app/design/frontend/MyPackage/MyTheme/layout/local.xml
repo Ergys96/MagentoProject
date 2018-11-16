@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+   <layout version="0.1.0">
+     <default translate="label" module="page">
+      <reference name="root">
+         <reference name="head">
+ 
+           <!-- Remove the rwd parent's styles.css file -->
+           <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+ 
+           <!-- Add it again before your css/myStyle.css file -->
+           <action method="addItem"><type>skin_css</type><name>css/styles.css</name></action>
+ 
+           <!-- Loading css/myStyle.css file just after parent's styles.css -->
+           <action method="addItem"><type>skin_css</type><name>css/myStyle.css</name></action>
+ 
+           <!-- Loading myScript.js file -->
+           <action method="addItem"><type>skin_js</type><name>js/myScript.js</name></action>
+         </reference> 
+         </reference>
+         </default>
+         <catalog_product_view>
+        <reference name="product.info">
+            <block type="core/template" name="product.specs" as="specs" template="catalog/product/view/specifications.phtml">
+                    <action method="addToParentGroup"><group>detailed_info</group></action>
+                    <action method="setTitle" translate="value"><value>Specifications</value></action>
+            </block>
+        </reference>
+    </catalog_product_view>
+   </layout>

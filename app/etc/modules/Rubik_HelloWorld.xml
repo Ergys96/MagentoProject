@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Rubik_HelloWorld>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rubik_HelloWorld>
+    </modules>
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Rubik_CustomerAttribute>
+        <version>0.0.2</version>
+    </Rubik_CustomerAttribute>
+</modules>
+
+<global>
+        <resources>
+        <!-- Customer Attribute Setup -->
+            <customerattribute_setup>
+                <setup>
+                    <module>Rubik_CustomerAttribute</module>
+                    <class>Rubik_CustomerAttribute_Model_Mysql4_Setup</class>
+                </setup>
+            </customerattribute_setup>
+        </resources>
+    </global>
+</config>

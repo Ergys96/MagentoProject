@@ -1,0 +1,304 @@
+2018-11-13T16:12:53+00:00 DEBUG (7): Exception message: Decoding failed: Syntax error
+Trace: #0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Helper\Data.php(659): Zend_Json::decode('', 1)
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Persistent\Model\Session.php(133): Mage_Core_Helper_Data->jsonDecode(NULL)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Abstract.php(226): Mage_Persistent_Model_Session->_afterLoad()
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Persistent\Model\Session.php(168): Mage_Core_Model_Abstract->load('1', 'customer_id')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Persistent\Model\Observer\Session.php(67): Mage_Persistent_Model_Session->loadByCustomerId('1')
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(1358): Mage_Persistent_Model_Observer_Session->synchronizePersistentOnLogin(Object(Varien_Event_Observer))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(1337): Mage_Core_Model_App->_callObserverMethod(Object(Mage_Persistent_Model_Observer_Session), 'synchronizePers...', Object(Varien_Event_Observer))
+#7 C:\xampp\htdocs\magento\app\Mage.php(448): Mage_Core_Model_App->dispatchEvent('customer_login', Array)
+#8 C:\xampp\htdocs\magento\app\code\core\Mage\Customer\Model\Session.php(226): Mage::dispatchEvent('customer_login', Array)
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Customer\controllers\AccountController.php(351): Mage_Customer_Model_Session->setCustomerAsLoggedIn(Object(Mage_Customer_Model_Customer))
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Customer\controllers\AccountController.php(304): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->createPostAction()
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#13 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#17 {main}
+2018-11-14T12:14:54+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'hello')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'hello')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:16:54+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'hello')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'hello')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:17:48+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'gysi')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'gysi')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:18:49+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'gysi')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'gysi')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:20:04+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'gysi')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'gysi')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:20:36+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'gysi')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'gysi')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:24:36+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:24:42+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:26:55+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:26:56+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Hello_Block_Products in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Hello_Bloc...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('hello/products', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('hello/products', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:27:34+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Core_Block_Produtemplate in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Core_Block...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('core/produtempl...', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('core/produtempl...', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:27:38+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Core_Block_Produtemplate in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Core_Block...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('core/produtempl...', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('core/produtempl...', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:27:40+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Core_Block_Produtemplate in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Core_Block...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('core/produtempl...', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('core/produtempl...', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-14T12:27:44+00:00 ERR (3): 
+Mage_Core_Exception: Invalid block type: Mage_Core_Block_Produtemplate in C:\xampp\htdocs\magento\app\Mage.php:595
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Core_Block...', Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('core/produtempl...', 'hello_products')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('core/produtempl...', 'hello_products')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\xampp\htdocs\magento\app\code\local\Rubik\HelloWorld\controllers\WorldController.php(9): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rubik_HelloWorld_WorldController->indexAction()
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#15 {main}
+2018-11-15T10:34:15+00:00 DEBUG (7): Exception message: Decoding failed: Syntax error
+Trace: #0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Helper\Data.php(659): Zend_Json::decode('', 1)
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Persistent\Model\Session.php(133): Mage_Core_Helper_Data->jsonDecode(NULL)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Abstract.php(226): Mage_Persistent_Model_Session->_afterLoad()
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Persistent\Model\Session.php(168): Mage_Core_Model_Abstract->load('2', 'customer_id')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Persistent\Model\Observer\Session.php(67): Mage_Persistent_Model_Session->loadByCustomerId('2')
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(1358): Mage_Persistent_Model_Observer_Session->synchronizePersistentOnLogin(Object(Varien_Event_Observer))
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(1337): Mage_Core_Model_App->_callObserverMethod(Object(Mage_Persistent_Model_Observer_Session), 'synchronizePers...', Object(Varien_Event_Observer))
+#7 C:\xampp\htdocs\magento\app\Mage.php(448): Mage_Core_Model_App->dispatchEvent('customer_login', Array)
+#8 C:\xampp\htdocs\magento\app\code\core\Mage\Customer\Model\Session.php(226): Mage::dispatchEvent('customer_login', Array)
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Customer\controllers\AccountController.php(351): Mage_Customer_Model_Session->setCustomerAsLoggedIn(Object(Mage_Customer_Model_Customer))
+#10 C:\xampp\htdocs\magento\app\code\core\Mage\Customer\controllers\AccountController.php(304): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#11 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->createPostAction()
+#12 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#13 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#17 {main}

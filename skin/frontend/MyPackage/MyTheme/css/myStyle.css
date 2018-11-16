@@ -1,0 +1,16 @@
+p, h1, h2, h3, h4, h5, h6 {
+    color: #3498db;
+}
+
+.products-grid li {
+    list-style-type: none;
+}
+
+.widget-title h2 {
+    margin-bottom: 70px;
+    font-family: 'Monaco';
+}
+
+em {
+    color:red;
+}

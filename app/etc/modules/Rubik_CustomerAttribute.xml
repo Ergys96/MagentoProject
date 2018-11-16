@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Rubik_CustomerAttribute>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>0.0.2</version>
+        </Rubik_CustomerAttribute>
+    </modules>
+</config>
